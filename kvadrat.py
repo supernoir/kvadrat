@@ -2,20 +2,27 @@
 
 import random
 
-def randomizer():
-        x = random.randrange(0,100)
-	print x
-        return x
+kvad = []
 
-randomizer()
+def randomizer(a,b):
+    x = random.randrange(a,b)
+    #print x
+    return x
 
-def rowbuilder():
-	for i in range(1,99):
-		if i % 3 == 0:
-			print str(i) + "\n"
-		else:
-			print i,
-	return
+def builder():
+    for j in range(1,10):
+        kvad.append(j)
+    print kvad
+    return kvad
 
-rowbuilder()
 
+def blockify(k):
+    for i in range(1,10):
+        r = randomizer(0,10)
+        if i % 3 == 0:
+            print " | " + str(k[r]) + " | "
+        else:
+            print " | " + str(k[r]) + " | ",
+
+builder()
+blockify(kvad)
